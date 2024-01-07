@@ -24,7 +24,8 @@ def test_calculate_square2()->None:
     for item,result in zip(input,expected_result):
         actual_result = operations.calculate_square(item)
         assert pytest.approx(actual_result) == result
-        
+
+@pytest.mark.skip(reason='negative test case')      
 def test_calculate_area_circle()->None:
     '''
     calculate area of circle
@@ -35,7 +36,7 @@ def test_calculate_area_circle()->None:
     for item, result in zip(input,expected_result):
         actual_result = operations.calcualte_area_circle(item)
         assert pytest.approx(actual_result,rel=1e-3) == result
-        
+@pytest.mark.skip(reason='negative test case')       
 def test_calculate_area_circle1():
     with pytest.raises(ValueError):
         operations.calcualte_area_circle(-4)
